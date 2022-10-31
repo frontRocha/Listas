@@ -1,6 +1,5 @@
 import './styles.scss'
 import { Todo } from '../../App'
-import { useState } from 'react'
  
 type CardProps = { 
     todo: Todo;
@@ -20,10 +19,12 @@ export default function Card({ todo, completeTodo, deletarTodo }: CardProps) {
 
     return (
         <div className={`card ${todo.completed ? 'done' : ''}`}>
-            <h2>{todo.title}</h2>
+            <div className='check'>
+                <input type='checkbox' onClick={handleCompleteTodo}/>
+                <h2>{todo.title[0].toUpperCase() + todo.title.substring(1)}</h2>
+            </div>
 
             <div className="card-button">
-                <button onClick={handleCompleteTodo}>{todo.completed == true ? 'Retomar' : 'Completar'}</button>
                 <button onClick={handleDelete}>Deletar</button>
             </div>
         </div>
