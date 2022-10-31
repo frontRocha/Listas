@@ -1,5 +1,5 @@
 import { ChangeEvent, useState, useEffect } from 'react'
-import Card from './components/Card'
+import Card from './components/Card/Index'
 import './App.scss'
 
 export type Todo = {
