@@ -1,5 +1,5 @@
 import { ChangeEvent, useState, useEffect } from 'react'
-import Card from './Components/Card/Card';
+import Card from './Components/Card/Card'
 import './App.scss'
 
 export type Todo = {
@@ -8,7 +8,7 @@ export type Todo = {
   completed: boolean;
 }
 
-function App() {
+export default function App() {
 
   const [todoInput, setTodoInput] = useState('')
   const [todos, setTodos] = useState<Todo[]>(() => {
@@ -89,5 +89,3 @@ function App() {
     </section>
   )
 }
-
-export default App
