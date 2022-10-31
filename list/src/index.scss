@@ -1,4 +1,6 @@
+@use './variables.scss';
+
 * {
-    padding: 0;
-    margin: 0;
+    padding: variables.$numberDefault;
+    margin: variables.$numberDefault;
 }
